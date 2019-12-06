@@ -1,0 +1,50 @@
+body {
+    background-image: url(img/f1rox-MZF9BE1JR5C-Full-Image_GalleryBackground-en-US-1559166773559._SX1080_.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+    align-items: center;
+    justify-content: center;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.orange-photo {
+    display: flex;
+    z-index: -1;
+}
+
+.feud-logo {
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+}
+
+.game-questions {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+
+
+div .playeranswer {
+    justify-content: center;
+}
+
+.question {
+    text-align: center
+}
+
+p {
+    background-color: black;
+    text-align: center;
+    border: 1px;
+    border-color: solid white;
+}
+
+.container {
+    display: flex;
+}
+
+
+
