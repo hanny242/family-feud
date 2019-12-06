@@ -26,8 +26,14 @@ body {
     color: black;
 }
 
+.button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
 
 div .playeranswer {
+    display: flex;
     justify-content: center;
 }
 
@@ -36,10 +42,14 @@ div .playeranswer {
 }
 
 p {
+    display: flex;
     background-color: black;
     text-align: center;
-    border: 1px;
-    border-color: solid white;
+    border-style: solid;
+    border-color: white;
+    padding: 20px;
+    width: 400px;
+    justify-items: center;
 }
 
 .container {

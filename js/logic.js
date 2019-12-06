@@ -245,6 +245,7 @@ class FamilyFeudGame {
                 document.querySelector(`.answer-${i}`).style.backgroundColor = "transparent";
                 //document.querySelector(`.percentage-${i}`) = this.playerPoints
                 this.correctAnswersCounter++;
+                document.getElementsByTagName('input').innerHTML = "";
                 return;
             }
         } 
