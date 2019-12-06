@@ -1,22 +1,21 @@
 body {
-    background-image: url(img/f1rox-MZF9BE1JR5C-Full-Image_GalleryBackground-en-US-1559166773559._SX1080_.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -2;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-family: "Lucida Console", Monaco, monospace;
+	-webkit-animation: pulse 10s infinite;
+	animation: pulse 10s infinite;
+    z-index: 3;
+    font-family: "Cantarell" !important;
+    max-width: 100vw;
 }
 
-.orange-photo {
-    display: flex;
-    z-index: -1;
-}
-
-.feud-logo {
-    display: flex;
-    justify-content: center;
-    z-index: 0;
+h2 {
+    font-family: "Lobster" !important;
+    font-size: 5em;
+    margin: 20px;
+    color: rgba(153, 0, 255, 0.781);
+    text-shadow: 2px 2px 2px #e6b8f8;;
+    letter-spacing: 0.09em;
 }
 
 .game-questions {
@@ -32,29 +31,177 @@ body {
     justify-content: center;
 }
 
-div .playeranswer {
-    display: flex;
-    justify-content: center;
-}
 
 .question {
-    text-align: center
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 p {
-    display: flex;
     background-color: black;
     text-align: center;
-    border-style: solid;
-    border-color: white;
-    padding: 20px;
-    width: 400px;
-    justify-items: center;
+    border: solid 3px white;
+    border-radius: 15px;
+    padding: 15px;
+    width: 300px;
+    margin: 5px auto;
 }
 
 .container {
     display: flex;
 }
 
+.player-answer {
+    width: 300px;
+    height: 3em;
+    margin: 20px;
+    border-radius: 10px;
+    border: solid 2px black;
+    padding: 0 0.5em;
+}
+
+.submit-answer {
+    width: 150px;
+    height: 3.5em;
+    margin: 20px;
+    border: none;
+    border-radius: 10px;
+    background: rgb(4, 121, 255);
+    font-family: "Cantarell"
+}
+
+.submit-answer:hover {
+    background: rgb(68, 233, 245);
+}
+
+.score {
+    color: white;
+    margin: 0;
+}
+
+#points {
+    font-family: "Lobster" !important;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px #e7e7f875;;
+    letter-spacing: 0.09em;
+    margin: 0 0 5px 0;
+}
 
 
+
+
+@keyframes pulse {
+	0% {
+		background: #f44336;
+	}
+	25% {
+		background: #e91e63;
+	}
+	50% {
+		background: #9c2780;
+	}
+	75% {
+		background: #673ab7;
+	}
+	100% {
+		background: #f44336;
+	}
+}
+
+.bubbles {
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+    max-width: 80vw;
+	height: 100%;
+	z-index: -1;
+	transform: translateZ(0);
+}
+
+.bubbles li {
+	position: absolute;
+	list-style: none;
+	display: block;
+	background-color: rgba(255, 255, 255, 0.15);
+	bottom: -100px;
+	animation: circle 15s infinite;
+	transition-timing-function: linear;
+}
+
+.bubbles li:nth-child(1) {
+	width: 40px;
+	height: 40px;
+	left: 20%;
+}
+
+.bubbles li:nth-child(2) {
+	width: 60px;
+	height: 60px;
+	left: 40%;
+	animation-delay: 2s;
+	animation-duration: 16s;
+}
+
+.bubbles li:nth-child(3) {
+	width: 30px;
+	height: 30px;
+	left: 60%;
+	animation-delay: 4s;
+	animation-duration: 13s;
+}
+
+.bubbles li:nth-child(4) {
+	width: 80px;
+	height: 80px;
+	left: 80%;
+	animation-delay: 1s;
+	animation-duration: 19s;
+}
+
+.bubbles li:nth-child(5) {
+	width: 50px;
+	height: 50px;
+	left: 50%;
+	animation-delay: 5s;
+	animation-duration: 12s;
+}
+
+.bubbles li:nth-child(6) {
+	width: 25px;
+	height: 25px;
+	left: 10%;
+	animation-delay: 3s;
+	animation-duration: 11s;
+}
+
+.bubbles li:nth-child(7) {
+	width: 55px;
+	height: 55px;
+	left: 70%;
+	animation-delay: 2.5s;
+	animation-duration: 11s;
+}
+
+.bubbles li:nth-child(8) {
+	width: 75px;
+	height: 75px;
+	left: 30%;
+	animation-delay: 3.5s;
+	animation-duration: 11s;
+}
+
+@keyframes circle {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+	100% {
+		-webkit-transform: translateY(-1080px) rotate(800deg);
+		transform: translateY(-1080px) rotate(800deg);
+	}
+}

@@ -242,9 +242,12 @@ class FamilyFeudGame {
         for (let i =0; i < answersArray.length; i++){
             let answer = answersArray[i];
             if (answer.answer.toLowerCase() === submittedAnswer.toLowerCase()) {
+                debugger
                 document.querySelector(`.answer-${i}`).style.backgroundColor = "transparent";
-                //document.querySelector(`.percentage-${i}`) = this.playerPoints
+                //document.querySelector(`.percentage-${i}`).innerHTML = this.playerPoints.value
                 this.correctAnswersCounter++;
+                this.playerPoints += answer.percentage
+                document.querySelector("#points").innerHTML = this.playerPoints
                 document.getElementsByTagName('input').innerHTML = "";
                 return;
             }
@@ -267,7 +270,7 @@ class FamilyFeudGame {
         if (this.correctAnswersCounter === this.questions[this.questionCounter].answers.length || this.incorrectAnswers === 3){
             this.questionCounter++;
             this.correctAnswersCounter = 0;
-            debugger
+      
             renderQuestion(this.questions[this.questionCounter]);
         } 
     }

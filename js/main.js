@@ -37,13 +37,14 @@ function renderQuestion(question){
     document.getElementsByClassName("question")[0].innerHTML = `
       <div class="question">
         <h1>${question.question}</h1>
-        ${answersHTML}
+        <div class="score"><h3>YOUR SCORE: <h5 id="points">${game.playerPoints}</h5></h3></div>
+        <div class="options">${answersHTML}</div>
       </div>
     `;
 }
 
 document.querySelector(".submit-answer").addEventListener("click", function(){
-  let answer = document.querySelector('.playerAnswer').value
+  let answer = document.querySelector('.player-answer').value
   game.checkIfRight(answer);
   game.nextQuestion();
   document.querySelector('.player-points').value = game.playerPoints.value
