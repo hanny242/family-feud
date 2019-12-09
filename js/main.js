@@ -37,7 +37,10 @@ function renderQuestion(question){
     document.getElementsByClassName("question")[0].innerHTML = `
       <div class="question">
         <h1>${question.question}</h1>
+        <div class="scores">
         <div class="score"><h3>YOUR SCORE: <h5 id="points">${game.playerPoints}</h5></h3></div>
+        <div class="incorrect"><h3>INCORRECT ANSWERS: <h5 id="bad-answers">${game.incorrectAnswers}</h5></h3></div>
+        </div>
         <div class="options">${answersHTML}</div>
       </div>
     `;
@@ -47,15 +50,5 @@ document.querySelector(".submit-answer").addEventListener("click", function(){
   let answer = document.querySelector('.player-answer').value
   game.checkIfRight(answer);
   game.nextQuestion();
-  document.querySelector('.player-points').value = game.playerPoints.value
 })
 
-
-
-//document.querySelector(".submit-answer").onclick = function() {
-  // todo B
-  // get value
-  // check if answer is correct
-  // go to next question
-  // render next question
-//}
